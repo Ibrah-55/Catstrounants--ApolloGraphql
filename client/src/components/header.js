@@ -19,7 +19,7 @@ const Header = ({ children }) => {
                 <Logo src={logo} />
               </LogoContainer>
               <Title>
-                <h3>Catstronaut</h3>
+                <h3>Catstronauts</h3>
                 <div>Kitty space academy</div>
               </Title>
             </HomeButton>
@@ -33,7 +33,6 @@ const Header = ({ children }) => {
 
 export default Header;
 
-/** Header styled components */
 const HeaderBar = styled.div({
   display: 'flex',
   flexDirection: 'row',
