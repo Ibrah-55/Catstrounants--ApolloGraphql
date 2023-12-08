@@ -1,9 +1,6 @@
 import React from 'react';
 import { Layout } from '../components';
-import { useQuery, gql } from "@apollo/client";/**
- * Tracks Page is the Catstronauts home page.
- * We display a grid of tracks fetched with useQuery with the TRACKS query
- */
+import { useQuery, gql } from "@apollo/client";
 import TrackCard from "../containers/track-card";
 import QueryResult from "../components/query-result";
 const TRACKS = gql`
