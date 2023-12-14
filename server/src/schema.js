@@ -7,7 +7,7 @@ const typeDefs = gql`
     author: Author!
     thumbnail: String
     length: Int
-    moduleCount: Int
+    modulesCount: Int
     description: String
     # url:String
     numberOfViews: Int
@@ -16,7 +16,6 @@ const typeDefs = gql`
   type Module {
     id: ID!
     title: String
-
     length: Int
   }
   

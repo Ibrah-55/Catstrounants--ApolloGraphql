@@ -10,7 +10,7 @@ query getTracks {
     title
     thumbnail
     length
-    moduleCount
+    modulesCount
     author {
       id
       name

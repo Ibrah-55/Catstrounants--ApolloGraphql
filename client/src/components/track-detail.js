@@ -13,11 +13,6 @@ import { Link } from 'react-router-dom';
 import ContentSection from './content-section';
 import MarkDown from './md-content';
 
-/**
- * Track Detail component renders the main content of a given track:
- * author, length, number of views, modules list, among other things.
- * It provides access to the first module of the track.
- */
 const TrackDetail = ({ track }) => {
   const {
     title,

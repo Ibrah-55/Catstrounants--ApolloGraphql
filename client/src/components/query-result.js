@@ -18,7 +18,7 @@ const QueryResult = ({ loading, error, data, children }) => {
   }
   if (data) {
     return children;
-  }
+  }   
 };
 
 export default QueryResult;
