@@ -1,23 +1,22 @@
 const resolvers = {
     Query: {
-        tracksForHome: (_, __, { dataSources }) => {
-            return dataSources.trackAPI.getTracksForHome();
-        },
-        tracksForHomeFetch: {
-            data: async () => {
-                const baseUrl = "https://odyssey-lift-off-rest-api.herokuapp.com";
-                const res = await fetch(`${baseUrl}/tracks`);
-                return res.json();
-            },
-        },
+      tracksForHome: (_, __, { dataSources }) => {
+        return dataSources.trackAPI.getTracksForHome();
+      },
+  
+      track: (_, { id }, { dataSources }) => {
+        return dataSources.trackAPI.getTrack(id);
+      },
     },
-    
     Track: {
-        author: async ({ authorId }, _, { dataSources }) => {
-            return dataSources.trackAPI.getAuthor(authorId);
-        },
+      author: ({ authorId }, _, { dataSources }) => {
+        return dataSources.trackAPI.getAuthor(authorId);
+      },
+  
+      modules: ({ id }, _, { dataSources }) => {
+        return dataSources.trackAPI.getTrackModules(id);
+      },
     },
-   
-};
-
-module.exports = resolvers;
+  };
+  
+  module.exports = resolvers;
